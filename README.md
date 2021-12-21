@@ -13,9 +13,11 @@ To start, let's set some rules that are required for this calculation to take pl
 
 Let's take John Conway's birthday, December 26th, 1937. As a date in the 1900s, the anchor day was Wednesday, so the counter starts off at 3. Taking the last two digits of the year, 37, we apply the following math.
 
-37 // 12 = 3
-37 % 12 = 1
-1 // 4 = 0
+>37 // 12 = 3
+
+>37 % 12 = 1
+
+>1 // 4 = 0
 
 With the century code of 3 (corresponding to Wednesday) in mind, the sum of these numbers is 7. As one final calculation, 7 % 7 is 0, which means for the year 1937, the doomsdays are Sundays.
 
