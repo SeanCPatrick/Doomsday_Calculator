@@ -27,24 +27,8 @@ Knowing that 12/12 was a Sunday, that means John Conway was born on a Sunday.
 
 ## Shortcomings and Challenges
 
-Personally, there were two challenges with creating this program, regarding the limited range of years this method could be applied to, and the input method for the user.
+Personally, there was just one challenge with creating this program, regarding the input method for the user.
 
-Keeping in mind that the Gregorian calendar repeats itself every 400 years, I wanted to make it so that the user could get a day of the week for any date from year 0 to the year 9999. My initial solve was to code it like so:
-
->if fullyear[:2] % 4 == 2
->>counter += 5
-
->elif fullyear[:2] % 4 == 3
->>counter += 3
-
->elif fullyear[:2] % 4 == 0
->>counter += 2
-
->elif fullyear[:2] % 4 == 1
->>counter += 0
-
-This would have replaced the code I wrote in lines 9 through 19, which is for determining the century code of the date input by the user. However, Python would not allow this because of a catch 22: the code "[:2]", in my novice understanding, can only be applied to strings, while the code "% 4" can only be applied to integers.
-
-Another challenge I had was determining the best input method for the user. There was a point where I wanted the date to be one string, then split it into a list separated by slashes or dashes, and pop each item in the list to each be their own objects, but I ultimately decided this was the simpler and more elegant solution. Besides, slash, dash, or enter, it's the same number of keystrokes regardless.
+There was a point where I wanted the date to be one string, split it into a list separated by slashes or dashes, and then pop each item in the list as their own separate objects, but I ultimately decided the current version was the simpler and more elegant solution. Besides, slash, dash, or enter, it's the same number of keystrokes.
 
 For more information on how to do the Doomsday method, I liked [this video](https://youtu.be/714LTMNJy5M) a lot. If you want to get into the exact details of the math, along with some helpful mnemonics, [the Wikipedia article for the Doomsday Method](https://en.wikipedia.org/wiki/Doomsday_rule) does a great job of that.
